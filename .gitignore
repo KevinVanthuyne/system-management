@@ -2,3 +2,6 @@
 !.gitignore
 !extra_exercises/
 !ssh/
+!default/
+!init.d/
+!sshguard/
