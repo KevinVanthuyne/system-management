@@ -1,0 +1,7 @@
+# Commands used for the SSH assignment
+
+adduser check
+mkdir /home/check/.ssh
+# add public key to this file
+nano /home/check/.ssh/authorized_keys
+chmod 600 /home/check/authorized keys
