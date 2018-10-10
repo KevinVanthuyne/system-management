@@ -5,3 +5,4 @@ mkdir /home/check/.ssh
 # add public key to this file
 nano /home/check/.ssh/authorized_keys
 chmod 600 /home/check/authorized keys
+chown check /home/check/authorized_keys
