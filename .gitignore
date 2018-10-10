@@ -10,3 +10,4 @@
 !scripts/
 !sudoers*
 !nagios-plugins*
+!group
