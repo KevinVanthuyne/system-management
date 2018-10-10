@@ -1,0 +1,7 @@
+# added incron_config.sh script to a crontab that runs every 15 minutes
+crontab -e
+
+# added following line to config:
+*/15 * * * * /etc/scripts/incron_config.sh
+
+
