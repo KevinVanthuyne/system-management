@@ -4,7 +4,10 @@
 !ssh/
 !default/
 !init.d/
+!pam.d/
 !sshguard/
 !incron.d/
 !scripts/
+!sudoers
+!sudoers.d/
 
