@@ -8,6 +8,5 @@
 !sshguard/
 !incron.d/
 !scripts/
-!sudoers
-!sudoers.d/
-
+!sudoers*
+!nagios-plugins*
