@@ -5,3 +5,6 @@
 !default/
 !init.d/
 !sshguard/
+!incron.d/
+!scripts/
+
