@@ -1,0 +1,5 @@
+# added a line to crontab to apt-get update and upgrade every night at 3 am
+
+crontab -e
+
+2 0 * * * apt-get update && apt-get upgrade
