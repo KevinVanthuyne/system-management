@@ -1,7 +1,9 @@
-# added incron_config.sh script to a crontab that runs every 15 minutes
+# add 2 commands to a crontab to backup locally and remotely
 crontab -e
 
-# added following line to config:
+# added incron_config.sh script that runs every 15 minutes
 */15 * * * * /etc/scripts/incron_config.sh
 
+# added rsync command to backup /etc/ to leia every day at 2 am 
+0 2 * * * rsync -a /etc r0613906@leia.uclllabs.be:~/backup-systeembeheer/ -e "ssh -p 22345"
 
