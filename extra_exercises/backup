@@ -4,6 +4,7 @@ crontab -e
 # added incron_config.sh script that runs every 15 minutes
 */15 * * * * /etc/scripts/incron_config.sh
 
+# added key of this server to authorized keys of Leia
 # added rsync command to backup /etc/ to leia every day at 2 am 
 0 2 * * * rsync -a /etc r0613906@leia.uclllabs.be:~/backup-systeembeheer/ -e "ssh -p 22345"
 
