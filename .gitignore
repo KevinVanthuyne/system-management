@@ -11,3 +11,4 @@
 !sudoers*
 !nagios-plugins*
 !group
+!network/
