@@ -17,6 +17,7 @@
 !NetworkManager*
 !apparmor*
 !cron.daily*
-!dhcp/dhclient-exit-hooks.d/ntp
+!dhcp/dhclient-exit-hooks.d/
 !ntp.conf
 
+!logcheck/
