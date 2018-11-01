@@ -12,3 +12,11 @@
 !nagios-plugins*
 !group
 !network/
+
+# NTP 
+!NetworkManager*
+!apparmor*
+!cron.daily*
+!dhcp/dhclient-exit-hooks.d/ntp
+!ntp.conf
+
