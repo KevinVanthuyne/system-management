@@ -25,3 +25,7 @@
 !bind/
 !ppp/
 !ufw/
+
+# Apache
+!apache2/
+!logrotate.d/apache2
