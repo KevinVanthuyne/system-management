@@ -55,3 +55,4 @@ check:x:1000:
 kevin:x:1001:
 incron:x:115:
 ntp:x:116:
+bind:x:117:

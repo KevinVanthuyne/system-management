@@ -19,5 +19,9 @@
 !cron.daily*
 !dhcp/dhclient-exit-hooks.d/
 !ntp.conf
-
 !logcheck/
+
+# DNS
+!bind/
+!ppp/
+!ufw/
