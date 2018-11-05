@@ -17,6 +17,9 @@ zone "177.191.193.in-addr.arpa" {
 	file "/etc/bind/zones/reverse/rev.177.191.193";
 };
 
-// zone "www.kevin-vanthuyne.sb.uclllabs.be"
+zone "www.kevin-vanthuyne.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/www.kevin-vanthuyne.sb.uclllabs.be";
+};
 
 // zone "test.you.sb.uclllabs.be resolves"
