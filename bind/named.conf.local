@@ -6,3 +6,17 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+zone "ns.kevin-vanthuyne.sb.uclllabs.be" {
+	type master;
+	file "/etc/bind/zones/ns.kevin-vanthuyne.sb.uclllabs.be";
+};
+
+// not sure of this reverse zone
+zone "177.191.193.in-addr.arpa" {
+	type master;
+	file "/etc/bind/zones/reverse/rev.177.191.193";
+};
+
+// zone "www.kevin-vanthuyne.sb.uclllabs.be"
+
+// zone "test.you.sb.uclllabs.be resolves"
