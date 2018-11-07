@@ -1,17 +1,17 @@
 ;
 ; BIND reverse file for 177.191.193.in-addr.arpa
 ;
-$TTL    604800
+$TTL    300
 @       IN      SOA     ns.kevin-vanthuyne.sb.uclllabs.be. admin.kevin-vanthuyne.sb.uclllabs.be. (
-                                1       ; Serial
+                                2       ; Serial
                                 3h      ; Refresh
                                 1h      ; Retry
                                 1w      ; Expire
-                                1h )    ; Minimum
+                                300 )    ; Minimum
 ;
 @       IN      NS      ns.kevin-vanthuyne.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
 @       IN      NS      ns2.uclllabs.be.
-@       IN      NS      ns.arne-vandebemdt.sb.uclllabs.be.
+;@       IN      NS      ns.arne-vandebemdt.sb.uclllabs.be.
 
-161      IN      PTR     ns.kevin-vanthuyne.sb.uclllabs.be. ; 161 = host octet of IP address
+161      IN      PTR     kevin-vanthuyne.sb.uclllabs.be. ; 161 = host octet of IP address
