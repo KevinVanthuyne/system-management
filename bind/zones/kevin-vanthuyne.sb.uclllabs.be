@@ -19,4 +19,6 @@ ns.kevin-vanthuyne.sb.uclllabs.be.      IN      A       193.191.177.161 ; als ns
 ;ns2.uclllabs.be.                     IN      A
 ; ns.arnevandebemdt.sb.uclllabs.be.
 test.kevin-vanthuyne.sb.uclllabs.be.	IN	A	193.191.177.254
-www                     IN      CNAME   kevin-vanthuyne.sb.uclllabs.be.
+www.kevin-vanthuyne.sb.uclllabs.be	IN	A	193.191.177.161
+
+;www                     IN      CNAME   kevin-vanthuyne.sb.uclllabs.be.
