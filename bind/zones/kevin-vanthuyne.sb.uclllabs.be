@@ -3,7 +3,7 @@
 ;
 $TTL 300 ; 5 min
 @       IN      SOA     ns.kevin-vanthuyne.sb.uclllabs.be. admin.kevin-vanthuyne.sb.uclllabs.be. (
-                        5       ; SERIAL
+                        6       ; SERIAL
                         3h      ; Refresh
                         1h      ; Retry
                         1w      ; Expire
