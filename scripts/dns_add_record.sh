@@ -19,14 +19,14 @@ done
 # process CNAME record
 if [ $type = "CNAME" ]
 then
-	if [ "$#" -ne "2"]
+	if [ "$#" -ne "2" ]
 	then
 		echo "CNAME only takes 2 arguments: -t CNAME alias zone"
 		exit 1
 	else
 		alias=$1
 		zone=$2
-		echo "$alias	IN	CNAME	$zone" >> /etc/bind/zones/$zone
+		echo "$alias	IN	CNAME	$zone." >> /etc/bind/zones/$zone
 		echo "added CNAME record '$alias' to $zone"
 	fi
 
