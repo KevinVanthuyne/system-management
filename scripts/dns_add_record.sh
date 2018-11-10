@@ -7,6 +7,7 @@ while getopts 't:' OPTION; do
 	case "$OPTION" in
 		t)
 			type=$OPTARG
+			shift "$((OPTIND-1))"
 			;;
 		?)
 			echo "script usage: [-t (A|MX|CNAME)] subzone ip-adress zone"
@@ -15,7 +16,19 @@ while getopts 't:' OPTION; do
 	esac
 done
 
-echo "type was: $type"
+# check arguments
+if [ "$#" -ne "3" ]
+then
+	echo "incorrect amount of arguments"
+	echo "script usage: [-t (A|MX|CNAME)] subzone ip-adress zone"
+	exit 1
+fi
+
+subzone=$1
+ip=$2
+zone=$3
+
+echo "adding $type record '$subzone' (resolving to $ip) to $zone"
 
 # find the line with the version number and increase it by 1
 #awk -i inplace '/SERIAL/ {gsub(/[0-9]/, $1+=1, $1)}; { print }' $1
