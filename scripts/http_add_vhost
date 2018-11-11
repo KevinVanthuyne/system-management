@@ -34,3 +34,7 @@ echo "<!DOCTYPE html>
 
 	</html>
 	" > /var/www/html/$1/index.html
+
+# enable the host
+a2ensite $1.conf
+systemctl reload apache2
