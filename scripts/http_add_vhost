@@ -19,3 +19,16 @@ echo "<VirtualHost *:80>
 	" > /etc/apache2/sites-available/$1
 
 # create a default index page
+echo "<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Default index page</title>
+	</head>
+
+	<body>
+	This is a default index page for $1
+	</body>
+
+	</html>
+	" > /var/www/html/$1/index.html
