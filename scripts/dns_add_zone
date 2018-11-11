@@ -28,16 +28,13 @@ echo ";
                         1w      ; Expire
                         300 )    ; Minimum
 ;
-@       IN      NS      ns.kevin-vanthuyne.sb.uclllabs.be.
+@       IN      NS      ns
 @       IN      NS      ns1.uclllabs.be.
 @       IN      NS      ns2.uclllabs.be.
 ; @     IN      NS      ns.arne-vandebemdt.sb.uclllabs.be.
 
-ns.kevin-vanthuyne.sb.uclllabs.be.      IN      A       193.191.177.161
-;ns1.uclllabs.be.                     IN      A
-;ns2.uclllabs.be.                     IN      A
-;ns.arnevandebemdt.sb.uclllabs.be.
-$1.kevin-vanthuyne.sb.uclllabs.be.      IN      A       193.191.177.161
+ns      IN      A       193.191.177.161
+$1      IN      A       193.191.177.161
 " > /etc/bind/zones/$1.kevin-vanthuyne.sb.uclllabs.be
 
 # add NS record to kevin-vanthuyne.sb.uclllabs.be
