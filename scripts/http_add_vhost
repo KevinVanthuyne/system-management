@@ -16,9 +16,11 @@ echo "<VirtualHost *:80>
         ErrorLog \${APACHE_LOG_DIR}/$1-error.log
         CustomLog \${APACHE_LOG_DIR}/$1-access.log combined
 	</VirtualHost>
-	" > /etc/apache2/sites-available/$1
+	" > /etc/apache2/sites-available/$1.conf
 
 # create a default index page
+mkdir /var/www/html/$1
+
 echo "<!DOCTYPE html>
 	<html>
 	<head>
