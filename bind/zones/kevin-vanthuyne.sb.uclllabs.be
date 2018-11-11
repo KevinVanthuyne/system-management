@@ -18,4 +18,6 @@ $TTL 300 ; 5 min
 ns      IN      A       193.191.177.161 ; als ns in zelfde domein zit als zone: ip adres meegeven (= glue record)
 test	IN	A	193.191.177.254
 www	IN	A	193.191.177.161
-
+@	IN	A	193.191.177.161
+www1     IN      A       193.191.177.161
+www2     IN      A       193.191.177.161
