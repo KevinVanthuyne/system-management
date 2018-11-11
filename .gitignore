@@ -31,6 +31,8 @@
 !apache2/
 !logrotate.d/apache2
 
-
+# PHP
+!php/
+!cron.d/php
 
 *.swp
