@@ -33,3 +33,14 @@ ns.kevin-vanthuyne.sb.uclllabs.be.      IN      A       193.191.177.161
 $1.kevin-vanthuyne.sb.uclllabs.be.      IN      A       193.191.177.161
 " > /etc/bind/zones/$1.kevin-vanthuyne.sb.uclllabs.be
 
+# add NS record to kevin-vanthuyne.sb.uclllabs.be
+# after the last occurence of an @ (for the NS records)
+awk -v record="\n@      IN      NS      $1.kevin-vanthuyne.sb.uclllabs.be." \
+        'BEGIN{RS="";ORS="\n\n"}; /@/ {$0=$0 record}1' \
+        /etc/bind/zones/kevin-vanthuyne.sb.uclllabs.be \
+        > zone.tmp
+
+mv zone.tmp /etc/bind/zones/kevin-vanthuyne.sb.uclllabs.be
+
+# increase SERIAL of kevin-vanthuyne.sb.uclllabs.be
+awk -i inplace '/SERIAL/ {gsub(/[0-9]*/, $1+=1, $1)}; { print }' /etc/bind/zones/kevin-vanthuyne.sb.uclllabs.be

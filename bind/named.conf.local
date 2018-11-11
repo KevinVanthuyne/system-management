@@ -20,4 +20,3 @@ zone "177.191.193.in-addr.arpa" {
 	file "/etc/bind/zones/reverse/rev.177.191.193";
 };
 
-

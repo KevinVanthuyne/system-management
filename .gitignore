@@ -13,6 +13,7 @@
 !group
 !network/
 
+
 # NTP 
 !NetworkManager*
 !apparmor*
@@ -29,3 +30,7 @@
 # Apache
 !apache2/
 !logrotate.d/apache2
+
+
+
+*.swp
