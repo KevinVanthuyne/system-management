@@ -1,4 +1,11 @@
 #!/bin/bash
+
+if [ "$#" -ne "1" ]
+then
+	echo "dns_add_zone requires 1 argument: zone_name"
+	exit 1
+fi
+
 echo "Adding zone '$1.kevin-vanthuyne.sb.uclllabs.be'"
 
 # add zone to named.conf.local
