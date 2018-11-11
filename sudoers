@@ -17,11 +17,15 @@ Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 # Cmnd alias specification
 Cmnd_Alias	CHECK_APT = /usr/lib/nagios/plugins/check_apt
 Cmnd_Alias	ARP = /usr/sbin/arp
+Cmnd_Alias	DNS_ZONE = /etc/scripts/dns_add_zone.sh
+Cmnd_Alias	DNS_RECORD = /etc/scripts/dns_add_record.sh
 
 # User privilege specification
 root	ALL=(ALL:ALL) ALL
 check	ALL=(root) NOPASSWD:CHECK_APT
 check	ALL=(root) NOPASSWD:ARP
+check	ALL=(root) NOPASSWD:DNS_ZONE
+check	ALL=(root) NOPASSWD:DNS_RECORD
 
 # Allow members of group sudo to execute any command
 %sudo	ALL=(ALL:ALL) ALL
