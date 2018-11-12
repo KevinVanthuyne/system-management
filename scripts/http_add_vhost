@@ -1,9 +1,29 @@
 #!/bin/bash
 
-# check argument
+# only accept 1 argument
 if [ "$#" -ne "1" ]
 then
 	echo "http_add_vhost takes 1 argument: fully_qualified_domain_name"
+	exit 1
+fi
+
+# check if vhost is a subdomain of enabled domains
+domains = apache2ctl -S | grep sites-enabled | awk '{if(!$4) print $2; else print $4}' | grep -E -v '^\('
+
+match=false
+
+for domain in $domains
+do
+        echo $domain
+        if [[ $1 =~ $domain ]]
+        then
+                match=true
+        fi
+done
+
+if [ $match = false ]
+then
+        echo "$1 is not a subdomain of enabled domains"
 	exit 1
 fi
 
