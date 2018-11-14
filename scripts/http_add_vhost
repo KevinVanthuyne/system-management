@@ -8,7 +8,7 @@ then
 fi
 
 # check if vhost is a subdomain of enabled domains
-domains = apache2ctl -S | grep sites-enabled | awk '{if(!$4) print $2; else print $4}' | grep -E -v '^\('
+domains=$(apache2ctl -S | grep sites-enabled | awk '{if(!$4) print $2; else print $4}' | grep -E -v '^\(')
 
 match=false
 
@@ -28,7 +28,7 @@ then
 fi
 
 # add virtual host file for the domain
-echo "<VirtualHost *:80>
+echo "<VirtualHost 193.191.177.161:80>
         ServerName $1
         DocumentRoot /var/www/html/$1
 
@@ -56,5 +56,5 @@ echo "<!DOCTYPE html>
 	" > /var/www/html/$1/index.html
 
 # enable the host
-a2ensite $1.conf
+a2ensite $1.conf > /dev/null
 systemctl reload apache2
