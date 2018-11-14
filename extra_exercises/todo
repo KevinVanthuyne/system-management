@@ -1,2 +1,3 @@
 - NTP: add a second authorized server that can do NTP requests
 - DNS: add the IP of Arne's server to the zone files
+- Check for scripts: add_zone -> add_record -> add_vhost
