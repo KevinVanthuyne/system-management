@@ -1,0 +1,15 @@
+# installed mariadb-server
+
+# created database and table
+mariadb
+
+CREATE DATABASE `check`;
+
+USE check;
+
+CREATE TABLE log (
+	log_id INT NOT NULL AUTO_INCREMENT,
+	date DATE NOT NULL,
+	text TEXT NOT NULL,
+	PRIMARY KEY ( log_id ),
+);
