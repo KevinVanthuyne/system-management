@@ -36,3 +36,6 @@
 !cron.d/php
 
 *.swp
+
+# HTTPS
+apt/sources.list.d
