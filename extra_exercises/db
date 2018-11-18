@@ -1,15 +1,17 @@
-# installed mariadb-server
+# installed postgresql
 
 # created database and table
-mariadb
+su -s /bin/bash postgres
+psql
 
-CREATE DATABASE `check`;
+CREATE SCHEMA "check";
 
-USE check;
+SET SEARCH_PATH TO "check";
 
 CREATE TABLE log (
-	log_id INT NOT NULL AUTO_INCREMENT,
-	date DATE NOT NULL,
+	log_id SERIAL PRIMARY KEY NOT NULL,
 	text TEXT NOT NULL,
-	PRIMARY KEY ( log_id ),
+	date TIMESTAMP NOT NULL,
+	CONSTRAINT text_length CHECK (CHAR_LENGTH(text) <= 50)
 );
+
