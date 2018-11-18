@@ -56,3 +56,4 @@ kevin:x:1001:
 incron:x:115:
 ntp:x:116:
 bind:x:117:
+mysql:x:118:
