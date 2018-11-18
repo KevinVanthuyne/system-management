@@ -38,7 +38,7 @@ games:x:60:
 users:x:100:
 nogroup:x:65534:
 crontab:x:101:
-ssl-cert:x:102:
+ssl-cert:x:102:postgres
 input:x:103:
 postfix:x:104:
 postdrop:x:105:
@@ -57,3 +57,4 @@ incron:x:115:
 ntp:x:116:
 bind:x:117:
 mysql:x:118:
+postgres:x:119:
