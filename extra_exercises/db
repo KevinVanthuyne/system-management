@@ -14,3 +14,15 @@ CREATE TABLE log (
 	PRIMARY KEY (log_id)
 );
 
+# create the user and grant permissions
+CREATE USER `check` IDENTIFIED BY 'rDEetGxq82DCE';
+
+# for local user
+GRANT SELECT ON check.log TO `check`@localhost IDENTIFIED BY 'rDEetGxq82DCE';
+GRANT INSERT ON check.log TO `check`@localhost IDENTIFIED BY 'rDEetGxq82DCE';
+
+# for use by mrt.uclllabs.be
+GRANT SELECT ON check.log TO `check`@'193.191.177.6' IDENTIFIED BY 'rDEetGxq82DCE';
+GRANT INSERT ON check.log TO `check`@'193.191.177.6' IDENTIFIED BY 'rDEetGxq82DCE';
+
+FLUSH PRIVILEGES;
