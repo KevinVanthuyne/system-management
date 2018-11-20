@@ -20,3 +20,15 @@ zone "177.191.193.in-addr.arpa" {
 	file "/etc/bind/zones/reverse/rev.177.191.193";
 };
 
+zone "subzoneaiv4ja.kevin-vanthuyne.sb.uclllabs.be" {
+        type master;
+        allow-transfer { 193.191.176.254; 193.191.177.4; };
+        file "/etc/bind/zones/subzoneaiv4ja.kevin-vanthuyne.sb.uclllabs.be";
+};
+
+zone "subzoneyou4th.kevin-vanthuyne.sb.uclllabs.be" {
+        type master;
+        allow-transfer { 193.191.176.254; 193.191.177.4; };
+        file "/etc/bind/zones/subzoneyou4th.kevin-vanthuyne.sb.uclllabs.be";
+};
+
