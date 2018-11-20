@@ -29,8 +29,6 @@ echo ";
                         300 )    ; Minimum
 ;
 @       IN      NS      ns
-@       IN      NS      ns1.uclllabs.be.
-@       IN      NS      ns2.uclllabs.be.
 ; @     IN      NS      ns.arne-vandebemdt.sb.uclllabs.be.
 
 ns      IN      A       193.191.177.161
