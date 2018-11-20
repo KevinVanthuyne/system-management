@@ -38,7 +38,7 @@ $1      IN      A       193.191.177.161
 # add NS record to kevin-vanthuyne.sb.uclllabs.be
 # after the last occurence of an @ (for the NS records)
 awk -v record="\n@      IN      NS      $1.kevin-vanthuyne.sb.uclllabs.be." \
-        'BEGIN{RS="";ORS="\n\n"}; /@/ {$0=$0 record}1' \
+        'BEGIN{RS="";ORS="\n\n"}; /SOA/ {$0=$0 record}1' \
         /etc/bind/zones/kevin-vanthuyne.sb.uclllabs.be \
         > zone.tmp
 
