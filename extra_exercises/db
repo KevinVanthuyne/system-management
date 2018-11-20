@@ -26,3 +26,17 @@ GRANT SELECT ON check.log TO `check`@'193.191.177.6' IDENTIFIED BY 'rDEetGxq82DC
 GRANT INSERT ON check.log TO `check`@'193.191.177.6' IDENTIFIED BY 'rDEetGxq82DCE';
 
 FLUSH PRIVILEGES;
+
+# create a trigger for deleting the oldest row when exceeding 90 rows
+DELIMITER //
+CREATE TRIGGER delete_oldest
+AFTER INSERT ON log FOR EACH ROW
+BEGIN
+	IF (SELECT COUNT(log_id) FROM log) > 90 THEN
+		DELETE FROM log
+		WHERE date IS NOT NULL
+		ORDER BY date ASC LIMIT 1;
+	END IF;
+END; //
+DELIMITER ;
+
