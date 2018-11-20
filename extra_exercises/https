@@ -1,0 +1,6 @@
+# added .htacces to supersecure containing: 
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+
+# added cronjob for certificate renewall every 2 months
+0 0 1 */2 * certbot renew
+
