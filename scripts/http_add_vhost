@@ -49,7 +49,7 @@ echo "<!DOCTYPE html>
 	</head>
 
 	<body>
-	This is a default index page for $1
+	Welcome $1
 	</body>
 
 	</html>

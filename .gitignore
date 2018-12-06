@@ -38,15 +38,17 @@
 *.swp
 
 # HTTPS
-apt/sources.list.d
+!apt/sources.list.d
 
 # db
-iptables/
+!iptables/
 
 # SMTP
-postfix/
-insserv.conf.d/
-resolvconf/
-rsyslog.d/
-ufw/
-dovecot/
+!postfix/
+!insserv.conf.d/
+!resolvconf/
+!rsyslog.d/
+!ufw/
+!dovecot/
+
+bind/zones/subzone*
