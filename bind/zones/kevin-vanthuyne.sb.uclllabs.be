@@ -3,7 +3,7 @@
 ;
 $TTL 300 ; 5 min
 @       IN      SOA     ns.kevin-vanthuyne.sb.uclllabs.be. admin.kevin-vanthuyne.sb.uclllabs.be. (
-29 ; SERIAL
+211 ; SERIAL
                         3h      ; Refresh
                         1h      ; Retry
                         1w      ; Expire
@@ -25,3 +25,4 @@ secure	IN	A	193.191.177.161
 supersecure	IN	A	193.191.177.161
 mx.kevin-vanthuyne.sb.uclllabs.be	IN	A	193.191.177.161
 IN	MX	10	mx.kevin-vanthuyne.sb.uclllabs.be
+
