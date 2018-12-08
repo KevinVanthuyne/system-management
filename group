@@ -60,3 +60,4 @@ mysql:x:118:
 postgres:x:119:
 dovecot:x:120:
 dovenull:x:121:
+ftp:x:122:

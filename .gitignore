@@ -52,3 +52,8 @@
 !dovecot/
 
 bind/zones/subzone*
+
+# ftp
+!ftpusers
+!vsftpd.conf
+!logrotate.d/vsftpd
