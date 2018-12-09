@@ -9,8 +9,8 @@ iptables -D INPUT -p tcp --dport 993 -j ACCEPT
 iptables -D INPUT -p tcp --dport 22345 -j ACCEPT
 
 # allow tcp & udp on 53
-iptables -D INPUT -p tcp --dport 53 -j ACCEPT
-iptables -D INPUT -p udp --dport 53 -j ACCEPT
+iptables -D INPUT -p tcp --sport 53 -j ACCEPT
+iptables -D INPUT -p udp --sport 53 -j ACCEPT
 
 # allow icmp echo-request
 iptables -D INPUT -p icmp --icmp-type echo-request -j ACCEPT
@@ -22,6 +22,9 @@ iptables -D INPUT -s 192.168.255.0/24 -j ACCEPT
 iptables -D INPUT -s 172.16.0.0/16 -j ACCEPT
 iptables -D INPUT -s 193.191.177.6 -j ACCEPT  # mrt.uclllabs.be
 iptables -D INPUT -s 193.191.177.1 -j ACCEPT  # leia.uclllabs.be
+
+# allow git
+iptables -A INPUT -p tcp --sport 9418 -j ACCEPT
 
 # disable ip routing
 iptables -D FORWARD -j DROP
