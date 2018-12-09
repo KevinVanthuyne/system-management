@@ -26,6 +26,14 @@ iptables -A INPUT -s leia.uclllabs.be -j ACCEPT
 # disable ip routing
 iptables -I FORWARD -j DROP
 
+# set default policy to drop the rest
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+
+iptables -I INPUT -i lo -j ACCEPT
+iptables -I OUTPUT -o lo -j ACCEPT
+
 # enable tcp syn cookies
 awk -i inplace '/#net.ipv4.tcp_syncookies/ { gsub("#", "") }1' /etc/sysctl.conf
 sysctl -p
