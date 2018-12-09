@@ -31,8 +31,8 @@ iptables -P INPUT ACCEPT
 iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
 
-iptables -I INPUT -i lo -j ACCEPT
-iptables -I OUTPUT -o lo -j ACCEPT
+iptables -D INPUT -i lo -j ACCEPT
+iptables -D OUTPUT -o lo -j ACCEPT
 
 # enable tcp syn cookies
 awk -i inplace '/net.ipv4.tcp_syncookies/ { gsub("net.ipv4.tcp_syncookies=1", "#net.ipv4.tcp_syncookies=1") }1' /etc/sysctl.conf
