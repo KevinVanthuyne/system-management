@@ -22,3 +22,10 @@ iptables -A INPUT -s 192.168.255.0/24 -j ACCEPT
 iptables -A INPUT -s 172.16.0.0/16 -j ACCEPT
 iptables -A INPUT -s mrt.uclllabs.be -j ACCEPT
 iptables -A INPUT -s leia.uclllabs.be -j ACCEPT
+
+# disable ip routing
+iptables -I FORWARD -j DROP
+
+# enable tcp syn cookies
+awk -i inplace '/#net.ipv4.tcp_syncookies/ { gsub("#", "") }1' /etc/sysctl.conf
+sysctl -p
