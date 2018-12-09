@@ -1,0 +1,16 @@
+# this file is located in /etc/systemd/system/
+# but git doesn't want to include it in the repo so i put it here for now
+
+[Unit]
+Description=basic custom firewall using iptables
+After=network.target
+
+[Service]
+Type=oneshot
+# User=root
+ExecStart=/etc/scripts/firewall_enable
+RemainAfterExit=true
+ExecStop=/etc/scripts/firewall_disable
+
+[Install]
+WantedBy=multi-user.target

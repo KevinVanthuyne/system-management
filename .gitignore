@@ -13,7 +13,6 @@
 !group
 !network/
 
-
 # NTP 
 !NetworkManager*
 !apparmor*
@@ -57,3 +56,4 @@ bind/zones/subzone*
 
 # firewall
 !systemd/system/firewall.service
+iptables/
