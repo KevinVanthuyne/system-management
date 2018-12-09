@@ -15,3 +15,10 @@ iptables -A INPUT -p udp --dport 53 -j ACCEPT
 # allow icmp echo-request
 iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
 iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+
+# allow everything from IP addresses
+iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+iptables -A INPUT -s 192.168.255.0/24 -j ACCEPT
+iptables -A INPUT -s 172.16.0.0/16 -j ACCEPT
+iptables -A INPUT -s mrt.uclllabs.be -j ACCEPT
+iptables -A INPUT -s leia.uclllabs.be -j ACCEPT
