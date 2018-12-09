@@ -40,9 +40,6 @@
 # HTTPS
 !apt/sources.list.d
 
-# db
-!iptables/
-
 # SMTP
 !postfix/
 !insserv.conf.d/
