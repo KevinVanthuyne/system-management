@@ -37,3 +37,7 @@ iptables -I OUTPUT -o lo -j ACCEPT
 # enable tcp syn cookies
 awk -i inplace '/net.ipv4.tcp_syncookies/ { gsub("net.ipv4.tcp_syncookies=1", "#net.ipv4.tcp_syncookies=1") }1' /etc/sysctl.conf
 sysctl -p
+
+# save iptables
+iptables-save > /etc/iptables/rules.v4
+ip6tables-save > /etc/iptables/rules.v6
