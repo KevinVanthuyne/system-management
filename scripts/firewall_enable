@@ -9,8 +9,8 @@ iptables -A INPUT -p tcp --dport 993 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22345 -j ACCEPT
 
 # allow tcp & udp on 53
-iptables -A INPUT -p tcp --dport 53 -j ACCEPT
-iptables -A INPUT -p udp --dport 53 -j ACCEPT
+iptables -A INPUT -p tcp --sport 53 -j ACCEPT
+iptables -A INPUT -p udp --sport 53 -j ACCEPT
 
 # allow icmp echo-request
 iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
