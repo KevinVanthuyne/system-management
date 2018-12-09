@@ -57,3 +57,6 @@ bind/zones/subzone*
 !ftpusers
 !vsftpd.conf
 !logrotate.d/vsftpd
+
+# firewall
+!systemd/system/firewall.service
