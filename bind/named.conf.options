@@ -24,11 +24,5 @@ options {
 	
 	// listen for ipv6 on port 53 (default)
 	listen-on-v6 { any; };
-	// other ports
-	listen-on-v6 25 { any; };
-	listen-on-v6 80 { any; };
-	listen-on-v6 443 { any; };
-	listen-on-v6 993 { any; };
-	listen-on-v6 22345 { any; };	
 };
 
