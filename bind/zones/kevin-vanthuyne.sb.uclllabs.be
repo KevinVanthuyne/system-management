@@ -3,7 +3,7 @@
 ;
 $TTL 300 ; 5 min
 @       IN      SOA     ns.kevin-vanthuyne.sb.uclllabs.be. admin.kevin-vanthuyne.sb.uclllabs.be. (
-212 ; SERIAL
+214 ; SERIAL
                         3h      ; Refresh
                         1h      ; Retry
                         1w      ; Expire
@@ -28,4 +28,4 @@ IN	MX	10	mx.kevin-vanthuyne.sb.uclllabs.be
 
 ns	IN	AAAA	2001:6a8:2880:a077::a1
 @	IN	AAAA	2001:6a8:2880:a077::a1
-secure	IN	AAAA	2001:6a8:2880:a077::a1
+;secure	IN	AAAA	2001:6a8:2880:a077::a1
