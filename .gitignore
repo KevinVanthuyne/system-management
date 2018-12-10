@@ -56,4 +56,4 @@ bind/zones/subzone*
 
 # firewall
 !systemd/system/firewall.service
-iptables/
+!iptables/
