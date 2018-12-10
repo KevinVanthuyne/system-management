@@ -22,7 +22,6 @@ options {
 
 	auth-nxdomain no;    # conform to RFC1035
 	
-	// listen for ipv6 on port 53 (default)
 	listen-on-v6 { any; };
 };
 
