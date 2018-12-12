@@ -47,5 +47,5 @@ sysctl -p
 
 # load firewall rules from files
 iptables-restore < /etc/iptables/firewall-rules.v4
-iptables-restore < /etc/iptables/firewall-rules.v6
+ip6tables-restore < /etc/iptables/firewall-rules.v6
 

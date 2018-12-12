@@ -47,4 +47,4 @@ sysctl -p
 
 # load standard rules from files
 iptables-restore < /etc/iptables/standard-rules.v4
-iptables-restore < /etc/iptables/standard-rules.v6
+ip6tables-restore < /etc/iptables/standard-rules.v6
