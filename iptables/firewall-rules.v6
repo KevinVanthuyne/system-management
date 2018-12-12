@@ -16,6 +16,7 @@
 -A INPUT -p tcp -m tcp --dport 22345 -j ACCEPT
 -A INPUT -p tcp -m tcp --sport 53 -j ACCEPT
 -A INPUT -p udp -m udp --sport 53 -j ACCEPT
+-A INPUT -p ipv6-icmp -j ACCEPT
 -A INPUT -s 2001:6a8:2880:a021::6/128 -j ACCEPT
 -A INPUT -s 2001:6a8:2880:a021::1/128 -j ACCEPT
 -A FORWARD -j DROP
